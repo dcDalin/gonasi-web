@@ -3,7 +3,7 @@
 import useMenuItems from '@/hooks/useMenuItems';
 
 import MenuPillButton from '@/components/Buttons/MenuPillButton';
-import Container from '@/components/layouts/Container';
+import Container from '@/components/Layouts/Container';
 
 export default function MenuPills() {
   const menuItems = useMenuItems();

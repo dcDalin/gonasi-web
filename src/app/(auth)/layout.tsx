@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={montserrat.className}>
-        <section className='mx-auto max-w-xl rounded-lg shadow-lg'>
+        <section className='mx-auto max-w-xl rounded-lg shadow-none md:shadow-lg'>
           <AuthTopNav />
           <div className='p-4'>{children}</div>
         </section>

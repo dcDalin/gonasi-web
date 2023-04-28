@@ -1,6 +1,6 @@
 import AppLogo from '@/components/AppLogo';
 import AuthButton from '@/components/Buttons/AuthButton';
-import Container from '@/components/layouts/Container';
+import Container from '@/components/Layouts/Container';
 import LocationSelector from '@/components/Navigation/TopNav/LocationSelector';
 
 import { AUTH_REGISTER } from '@/constants/routes';
