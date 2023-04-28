@@ -1,3 +1,3 @@
 export default function AppLogo() {
-  return <h1>Gonasi</h1>;
+  return <h1 className='font-bold'>Gonasi</h1>;
 }
