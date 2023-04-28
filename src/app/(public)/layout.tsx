@@ -1,6 +1,6 @@
 import { Montserrat } from 'next/font/google';
 
-import './globals.css';
+import '../globals.css';
 
 import BottomNav from '@/components/Navigation/BottomNav';
 import TopNav from '@/components/Navigation/TopNav';
@@ -8,7 +8,10 @@ import TopNav from '@/components/Navigation/TopNav';
 const montserrat = Montserrat({ subsets: ['latin'] });
 
 export const metadata = {
-  title: 'Gonasi',
+  title: {
+    default: 'Gonasi',
+    template: '%s | Gonasi',
+  },
   description: 'Group tours made simple',
 };
 

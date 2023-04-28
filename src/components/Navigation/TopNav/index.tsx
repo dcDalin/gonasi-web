@@ -1,8 +1,9 @@
 import AppLogo from '@/components/AppLogo';
 import AuthButton from '@/components/Buttons/AuthButton';
 import Container from '@/components/layouts/Container';
+import LocationSelector from '@/components/Navigation/TopNav/LocationSelector';
 
-import { AUTH_LOGIN, AUTH_REGISTER } from '@/constants/routes';
+import { AUTH_REGISTER } from '@/constants/routes';
 
 export default function TopNav() {
   return (
@@ -13,10 +14,11 @@ export default function TopNav() {
             <AppLogo />
           </div>
           <div className='flex-none'>
-            <div className='hidden items-center space-x-2 md:flex'>
-              <AuthButton name='Add your tour' ghost href={AUTH_REGISTER} />
-              <AuthButton name='register' href={AUTH_REGISTER} />
-              <AuthButton name='login' href={AUTH_LOGIN} />
+            <div className='flex items-center space-x-2'>
+              <LocationSelector />
+              <div className='hidden md:flex'>
+                <AuthButton name='Add your tour' ghost href={AUTH_REGISTER} />
+              </div>
             </div>
           </div>
         </div>

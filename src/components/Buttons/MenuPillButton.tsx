@@ -5,12 +5,14 @@ import { useRouter } from 'next/navigation';
 interface IMenuPillButtonProps {
   name: string;
   icon: JSX.Element;
+  iconLast?: JSX.Element;
   path: string;
 }
 
 export default function MenuPillButton({
   name,
   icon,
+  iconLast,
   path,
 }: IMenuPillButtonProps) {
   const router = useRouter();
@@ -23,6 +25,7 @@ export default function MenuPillButton({
       <div className='flex items-center space-x-2'>
         <span>{icon}</span>
         <span>{name}</span>
+        {iconLast ? <span>{iconLast}</span> : null}
       </div>
     </button>
   );
