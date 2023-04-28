@@ -16,6 +16,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.14",
     "clsx": "^1.2.1",
     "daisyui": "^2.51.6",
     "next": "^13.3.1",

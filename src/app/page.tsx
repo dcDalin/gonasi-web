@@ -1,3 +1,9 @@
+import MenuPills from '@/components/Navigation/MenuPills';
+
 export default function Home() {
-  return <main>Go nasi</main>;
+  return (
+    <div>
+      <MenuPills />
+    </div>
+  );
 }
