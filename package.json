@@ -13,7 +13,8 @@
     "format": "prettier -w .",
     "format:check": "prettier -c .",
     "postbuild": "next-sitemap --config next-sitemap.config.js",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "gen-types": "supabase gen types typescript --linked > ./types/supabase.ts"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.14",
