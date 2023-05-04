@@ -3,12 +3,13 @@
 import { useRouter } from 'next/navigation';
 import { BiArrowBack } from 'react-icons/bi';
 
-import { PREVIOUS_ROUTE } from '@/constants/localStorage';
+import usePreviousRoute from '@/hooks/usePreviousRoute';
 
 export default function BackButton() {
   const router = useRouter();
 
-  const previousRoute = localStorage.getItem(PREVIOUS_ROUTE) || '/';
+  const previousRoute = usePreviousRoute();
+
   return (
     <button
       onClick={() => router.push(previousRoute)}
