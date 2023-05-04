@@ -5,6 +5,8 @@ import '../globals.css';
 import BottomNav from '@/components/Navigation/BottomNav';
 import TopNav from '@/components/Navigation/TopNav';
 
+import SupabaseProvider from '@/app/supabase-provider';
+
 const montserrat = Montserrat({ subsets: ['latin'] });
 
 export const metadata = {
@@ -23,9 +25,11 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={montserrat.className}>
-        <TopNav />
-        {children}
-        <BottomNav />
+        <SupabaseProvider>
+          <TopNav />
+          {children}
+          <BottomNav />
+        </SupabaseProvider>
       </body>
     </html>
   );
