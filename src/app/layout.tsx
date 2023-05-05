@@ -1,9 +1,6 @@
 import { Montserrat } from 'next/font/google';
 
-import '../globals.css';
-
-import BottomNav from '@/components/Navigation/BottomNav';
-import TopNav from '@/components/Navigation/TopNav';
+import './globals.css';
 
 import SupabaseProvider from '@/app/supabase-provider';
 
@@ -25,11 +22,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={montserrat.className}>
-        <SupabaseProvider>
-          <TopNav />
-          {children}
-          <BottomNav />
-        </SupabaseProvider>
+        <SupabaseProvider>{children}</SupabaseProvider>
       </body>
     </html>
   );

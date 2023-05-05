@@ -6,12 +6,16 @@ import SubmitButton from '@/components/Buttons/SubmitButton';
 import Input from '@/components/Forms/Elements/Input';
 import PasswordInput from '@/components/Forms/Elements/PasswordInput';
 
+import { useSupabase } from '@/app/supabase-provider';
+
 type FormValues = {
   email: string;
   password: string;
 };
 
 export default function LoginFormProvider() {
+  const { supabase } = useSupabase();
+
   const methods = useForm<FormValues>({
     mode: 'onTouched',
     reValidateMode: 'onChange',
@@ -19,8 +23,11 @@ export default function LoginFormProvider() {
 
   const { handleSubmit } = methods;
 
-  const onSubmit: SubmitHandler<FormValues> = async (data) => {
-    return data;
+  const onSubmit: SubmitHandler<FormValues> = async ({ email, password }) => {
+    await supabase.auth.signInWithPassword({
+      email,
+      password,
+    });
   };
 
   return (
